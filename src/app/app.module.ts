@@ -12,6 +12,8 @@ import { CardComponent } from './card/card.component';
 import { ListEventsComponent } from './Layout/list-events/list-events.component';
 import { CustomDirectiveDirective } from './custom-directive.directive';
 import { ContainsPipe } from './shared/pipes/contains.pipe';
+import { HighlightDirective } from './shared/directives/highlight.directive';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -22,13 +24,13 @@ import { ContainsPipe } from './shared/pipes/contains.pipe';
     NotFoundComponent,
     ListEventsComponent,
     CustomDirectiveDirective,
-    ContainsPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    CardComponent
+    CardComponent,
+     SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
