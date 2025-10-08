@@ -6,6 +6,7 @@ import { Event } from '../../models/event';
   templateUrl: './list-events.component.html',
   styleUrl: './list-events.component.css'
 })
+
 export class ListEventsComponent {
 
 searchTerm!:string;
