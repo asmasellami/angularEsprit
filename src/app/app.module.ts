@@ -11,6 +11,7 @@ import { NotFoundComponent } from './Layout/not-found/not-found.component';
 import { CardComponent } from './card/card.component';
 import { ListEventsComponent } from './Layout/list-events/list-events.component';
 import { CustomDirectiveDirective } from './custom-directive.directive';
+import { ContainsPipe } from './shared/pipes/contains.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CustomDirectiveDirective } from './custom-directive.directive';
     FooterComponent,
     NotFoundComponent,
     ListEventsComponent,
-    CustomDirectiveDirective
+    CustomDirectiveDirective,
+    ContainsPipe
   ],
   imports: [
     BrowserModule,
