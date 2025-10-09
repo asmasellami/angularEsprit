@@ -14,6 +14,8 @@ import { CustomDirectiveDirective } from './custom-directive.directive';
 import { ContainsPipe } from './shared/pipes/contains.pipe';
 import { HighlightDirective } from './shared/directives/highlight.directive';
 import { SharedModule } from './shared/shared.module';
+import { EventDetailsComponent } from './Layout/event-details/event-details.component';
+import { UserModule } from './user/user.module';
 
 @NgModule({
   declarations: [
@@ -24,13 +26,15 @@ import { SharedModule } from './shared/shared.module';
     NotFoundComponent,
     ListEventsComponent,
     CustomDirectiveDirective,
+    EventDetailsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     CardComponent,
-     SharedModule,
+    SharedModule,
+    UserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
