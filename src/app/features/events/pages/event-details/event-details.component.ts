@@ -7,18 +7,16 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './event-details.component.css'
 })
 export class EventDetailsComponent {
-  constructor(private route: ActivatedRoute) {}
- id!:Number;
 
- ngOninit()
- {
-      this.id = this.route.snapshot.params['param'];
+  constructor( private actR: ActivatedRoute) { }
 
+  id!:number;
+ ngOnInit(): void {
 
- }
- /*getparam(){
-    this.id = this.route.snapshot.params['param'];
- }
-  */
+  // this.id = Number(this.actR.snapshot.paramMap.get('id'));
+  this.actR.paramMap.subscribe(
+    params => this.id = Number(params.get('id')));
+
+  }
 
 }
