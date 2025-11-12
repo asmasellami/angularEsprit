@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ListEventsComponent } from './pages/list-events/list-events.component';
 import { EventDetailsComponent } from './pages/event-details/event-details.component';
 import { SharedModule } from '../../shared/shared.module';
+import { AddEventComponent } from './components/add-event/add-event.component';
 
 
 @NgModule({
@@ -17,14 +18,14 @@ import { SharedModule } from '../../shared/shared.module';
     ListEventsComponent,
     EventCardComponent,
     SearchBarComponent,
-    EventDetailsComponent
+    EventDetailsComponent,
+    AddEventComponent
   ],
   imports: [
     CommonModule,
     EventsRoutingModule,
     FormsModule,
-    ReactiveFormsModule
-    ,
+    ReactiveFormsModule,
     SharedModule
   ]
 })
