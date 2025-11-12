@@ -1,1 +1,34 @@
-<p>event-card works!</p>
+ <div class="card h-100 shadow-sm" >
+
+                <img [src]="eventC.imageUrl" alt="Event Image"
+                     class="card-img-top img-fluid"
+                     style="height: 200px; object-fit: cover;">
+
+                 <div class="card-body">
+                    <h5 class="card-title" appHighlight>{{ eventC.titre | titlecase}}</h5>
+                    <p class="text-muted" > {{ eventC.lieu }} + {{ eventC.date| date:'mediumDate' }}</p>
+                    <p>{{ eventC.description }}</p>
+                    <p class="fw-bold">{{ eventC.prix  | number | currency:'TND'}}</p>
+
+
+                    <button class="btn btn-sm btn-primary" (click)="likes_from_child(eventC)" [disabled]=" dateTest ">
+                        👍 Like
+                    </button>
+                    <span class="ms-2">{{ eventC.nbLikes }}</span>
+                    <!-- <button class="btn btn-sm btn-primary" routerLink="eventDetails/{{event.id}}">  -->
+                     <button class="btn btn-sm btn-primary" [routerLink]="['details', eventC.id]">
+
+                        📢 Show Details
+                    </button>
+
+                     <button class="btn btn-sm btn-primary" [routerLink]="['participer', eventC.id, eventC.prix]" [disabled]=" dateTest ">
+
+                        📝
+                       participer
+                    </button>
+                     <!-- <button class="btn btn-sm btn-primary" (click)="showDetails(event.id)">
+                       📢 Show Details
+                    </button> -->
+                </div>
+
+            </div>

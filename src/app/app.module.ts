@@ -16,6 +16,10 @@ import { HighlightDirective } from './shared/directives/highlight.directive';
 import { SharedModule } from './shared/shared.module';
 import { EventDetailsComponent } from './features/events/pages/event-details/event-details.component';
 import { UserModule } from './user/user.module';
+import { EventsModule } from './features/events/events.module';
+import { FeedbackModule } from './features/feedback/feedback.module';
+import { TicketsModule } from './features/tickets/tickets.module';
+import { UsersModule } from './features/users/users.module';
 
 @NgModule({
   declarations: [
@@ -24,9 +28,8 @@ import { UserModule } from './user/user.module';
     HeaderComponent,
     FooterComponent,
     NotFoundComponent,
-    ListEventsComponent,
     CustomDirectiveDirective,
-    EventDetailsComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -35,6 +38,10 @@ import { UserModule } from './user/user.module';
     CardComponent,
     SharedModule,
     UserModule,
+    EventsModule,
+    TicketsModule,
+    FeedbackModule,
+    UsersModule
   ],
   providers: [],
   bootstrap: [AppComponent]
